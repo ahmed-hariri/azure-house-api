@@ -1,0 +1,16 @@
+{
+  "type": "commonjs",
+  "scripts": {
+    "start": "nodemon --exec ts-node app.ts"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.17",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,7 +1,8 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const authRoutes = require("./routes/auth");
-const pool = require("./config/db"); // <-- Connexion importée depuis config/db.js
+const pool = require("./config/db");
+const cookieParser = require("cookie-parser");
 
 const app = express();
 
@@ -10,6 +11,7 @@ dotenv.config();
 
 /* ---> Middlewares <--- */
 app.use(express.json());
+app.use(cookieParser());
 
 /*---> Mounting the authentication routes on the "/auth" path <---*/
 app.use("/auth", authRoutes);

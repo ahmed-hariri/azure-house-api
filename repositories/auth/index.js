@@ -15,7 +15,7 @@ const signUpRepository = async (userData) => {
 
         const hashedPassword = await bcrypt.hash(password, 10);
         await pool.query(
-            "INSERT INTO users (fullName, email, password) VALUES (?, ?, ?)",
+            "INSERT INTO users (full_name, email, password) VALUES (?, ?, ?)",
             [fullName, email, hashedPassword]
         );
 

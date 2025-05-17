@@ -4,7 +4,7 @@ const { signInRepository, signUpRepository } = require("../../repositories/auth"
 const signUpController = async (req, res, next) => {
     // Destructuring
     const { fullName, email, password } = req.body
-    console.log(req.body)
+
     if (!fullName || !email || !password) {
         return res.status(400).type("json").json({ message: `You dont have : ${!fullName ? "fullName" : ""} ${!email ? "email" : ""} ${!password ? "password" : ""}` });
     }

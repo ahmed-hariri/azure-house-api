@@ -6,6 +6,7 @@ const morgan = require("morgan");
 
 const authRoutes = require("./routes/auth");
 const productRoutes = require("./routes/articles");
+const categorieRoutes = require("./routes/categories");
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use("/auth", authRoutes);
 
 /*---> Mounting the routes on the "/api" path <---*/
 app.use("/api", productRoutes);
+app.use("/api", categorieRoutes);
 
 /* ---> Start Server After Testing DB Connection <--- */
 (async () => {
